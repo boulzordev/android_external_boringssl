@@ -16,10 +16,6 @@ crypto_sources := \
   android_compat_hacks.c\
   android_compat_keywrap.c\
   err_data.c\
-  src/compat/p_dec.c\
-  src/compat/p_enc.c\
-  src/compat/p_open.c\
-  src/compat/p_seal.c\
   src/crypto/aes/aes.c\
   src/crypto/aes/mode_wrappers.c\
   src/crypto/asn1/a_bitstr.c\
