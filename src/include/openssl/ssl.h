@@ -517,10 +517,6 @@ OPENSSL_EXPORT uint32_t SSL_get_mode(const SSL *ssl);
 OPENSSL_EXPORT int SSL_get_tls_unique(const SSL *ssl, uint8_t *out,
                                       size_t *out_len, size_t max_out);
 
-/* SSL_initial_handshake_complete returns one if the initial handshake has
- * completed and zero otherwise. */
-OPENSSL_EXPORT int SSL_initial_handshake_complete(const SSL *ssl);
-
 
 /* Underdocumented functions.
  *
@@ -2759,9 +2755,6 @@ OPENSSL_EXPORT const char *SSLeay_version(int unused);
 #define SSL_F_SSL_AEAD_CTX_open 277
 #define SSL_F_SSL_AEAD_CTX_seal 278
 #define SSL_F_dtls1_seal_record 279
-#define SSL_F_SSL_SESSION_from_bytes 280
-#define SSL_F_SSL_SESSION_parse 281
-#define SSL_F_ssl3_check_certificate_for_cipher 282
 #define SSL_R_APP_DATA_IN_HANDSHAKE 100
 #define SSL_R_ATTEMPT_TO_REUSE_SESSION_IN_DIFFERENT_CONTEXT 101
 #define SSL_R_BAD_ALERT 102

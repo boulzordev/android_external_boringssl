@@ -477,13 +477,13 @@ static SSL_SESSION *SSL_SESSION_parse(CBS *cbs) {
                                   kExtendedMasterSecretTag,
                                   0 /* default to false */) ||
       CBS_len(&session) != 0) {
-    OPENSSL_PUT_ERROR(SSL, SSL_SESSION_parse, SSL_R_INVALID_SSL_SESSION);
+    OPENSSL_PUT_ERROR(SSL, d2i_SSL_SESSION, SSL_R_INVALID_SSL_SESSION);
     goto err;
   }
   ret->extended_master_secret = extended_master_secret;
 
   if (version != SSL_SESSION_ASN1_VERSION) {
-    OPENSSL_PUT_ERROR(SSL, SSL_SESSION_parse, SSL_R_INVALID_SSL_SESSION);
+    OPENSSL_PUT_ERROR(SSL, d2i_SSL_SESSION, SSL_R_INVALID_SSL_SESSION);
     goto err;
   }
 
